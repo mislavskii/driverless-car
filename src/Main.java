@@ -6,6 +6,14 @@ public class Main {
         GearBox gearBox = new GearBox(5);
         System.out.println(gearBox.getCurrentGear());
 
+        for (int i = 0; i < 7; i++) {
+            gearBox.shiftUp();
+        }
+
+        gearBox.switchRear();
+        gearBox.switchNeutral();
+        gearBox.switchRear();
+
     }
 
 }
