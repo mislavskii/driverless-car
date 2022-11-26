@@ -10,6 +10,8 @@ public class Main {
             gearBox.shiftUp();
         }
 
+        gearBox.shiftDown();
+
         gearBox.switchRear();
         gearBox.switchNeutral();
         gearBox.switchRear();

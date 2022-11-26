@@ -1,7 +1,7 @@
 public class GearBox {
     private int gear = 0;
-    private int maxGear = 6;
-    private int minGear = 1;
+    public final int maxGear;
+    public static final int MIN_GEAR = 1;
 
     public GearBox(int maxGear) {
         this.maxGear = maxGear;
@@ -18,7 +18,7 @@ public class GearBox {
     }
 
     public void shiftDown() {
-        if (gear > minGear) {
+        if (gear > MIN_GEAR) {
             gear -= 1;
             System.out.print("Shifted down to gear ");
             System.out.println(getCurrentGear());
