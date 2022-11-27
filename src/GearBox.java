@@ -2,8 +2,10 @@ public class GearBox {
     private int gear = 0;
     public final int maxGear;
     public static final int MIN_GEAR = 1;
+    public final GearBoxType type;
 
-    public GearBox(int maxGear) {
+    public GearBox(GearBoxType type, int maxGear) {
+        this.type = type;
         this.maxGear = maxGear;
     }
 
