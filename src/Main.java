@@ -1,27 +1,21 @@
-import java.util.Arrays;
-
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("Hello the chilly world of driverless cars!");
+        System.out.println("Hello the chilly world of driverless cars!\n");
 
-        System.out.println(Arrays.toString(GearBoxType.values()));
+        var myCar = new Car(
+                CarType.SUV,
+                new Engine(EngineType.DIESEL, 3.5, 156),
+                new GearBox(GearBoxType.MANUAL, 5),
+                2300
+        );
 
-        GearBoxType type = GearBoxType.valueOf("ROBOT");
-
-        GearBox gearBox = new GearBox(type, 5);
-        System.out.println(gearBox.getCurrentGear());
-        System.out.println(gearBox.type);
-
-        for (int i = 0; i < 7; i++) {
-            gearBox.shiftUp();
-        }
-
-        gearBox.shiftDown();
-
-        gearBox.switchRear();
-        gearBox.switchNeutral();
-        gearBox.switchRear();
+        System.out.println("Тип автомобиля: " + myCar.getCarType());
+        System.out.println("Масса автомобиля: " + myCar.getWeight());
+        System.out.println("Тип двигателя: " + myCar.engine.getEngineType());
+        System.out.println("Объём двигателя: " + myCar.engine.getDisplacement());
+        System.out.println("Мощность двигателя: " + myCar.engine.getPower());
+        System.out.println("Тип коробки передач: " + myCar.gearBox.type + " " + myCar.gearBox.maxGear);
 
     }
 
